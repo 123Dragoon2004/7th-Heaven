@@ -50,15 +50,15 @@
     <Description>Spiel im Fenstermodus oder Vollbild Starten.</Description>
     <DefaultValue>fullscreen = false,borderless = false</DefaultValue>
     <Option>
-      <Text>Windowed</Text>
+      <Text>Fenstermodus</Text>
       <Settings>fullscreen = false,borderless = false</Settings>
     </Option>
     <Option>
-      <Text>Fullscreen</Text>
+      <Text>Vollbild</Text>
       <Settings>fullscreen = true,borderless = false</Settings>
     </Option>
     <Option>
-      <Text>Borderless</Text>
+      <Text>Randloses Vollbild</Text>
       <Settings>fullscreen = false,borderless = true</Settings>
     </Option>
   </Setting>
@@ -77,7 +77,7 @@
       <Settings>aspect_ratio = 1</Settings>
     </Option>
     <Option>
-      <Text>Widescreen (16:9)</Text>
+      <Text>Breitbild (16:9)</Text>
       <Settings>aspect_ratio = 2</Settings>
     </Option>
   </Setting>
@@ -129,8 +129,8 @@
   
   <Setting xsi:type="Checkbox">
     <Group>Grafik</Group>
-    <Name>Advanced Lighting</Name>
-    <Description>Enable support for realtime lighting. NOTE: This feature requires a MODERN CPU. If you notice slowdows, please DISABLE this flag.</Description>
+    <Name>Erweiterte Beleuchtung</Name>
+    <Description>Aktiviert die Unterstüzung von Echtzeit Beleuchtung. INFO: Benötigt eine moderne CPU. Wenn das Spiel zu langsam läuft, deaktivere die Option.</Description>
     <DefaultValue>enable_lighting = false</DefaultValue>
     <TrueSetting>enable_lighting = true</TrueSetting>
     <FalseSetting>enable_lighting = false</FalseSetting>
@@ -139,8 +139,8 @@
   <!-- CHEATS TAB -->
   <Setting xsi:type="DropDown">
     <Group>Cheats</Group>
-    <Name>Zufällige Schlachten</Name>
-    <Description>Nicht konfigurierbar. Schaltet zufällige Kampfbegegnungen während des Spiels ein/aus.{0}Verwendung: STRG+B oder L3+R3</Description>
+    <Name>Zufallskämpfe</Name>
+    <Description>Nicht konfigurierbar. Schaltet zufällige Kampfbegegnungen während des Spiels ein/aus.{0}Verwendung: STRG+B oder L3+R3 oder Linker Analogstick+Y</Description>
     <DefaultValue></DefaultValue>
     <Option>
       <Text>Siehe Beschreibung</Text>
@@ -150,8 +150,8 @@
 
   <Setting xsi:type="DropDown">
     <Group>Cheats</Group>
-    <Name>Movies Uberspringen</Name>
-    <Description>Nicht konfigurierbar. Springt sofort zum Ende eines Movies.{0}Verwendung: STRG+S oder Wählen Sie+Anfang</Description>
+    <Name>Movies überspringen</Name>
+    <Description>Nicht konfigurierbar. Springt sofort zum Ende eines Movies.{0}Verwendung: STRG+S oder Linker Analogstick+X</Description>
     <DefaultValue></DefaultValue>
     <Option>
       <Text>Siehe Beschreibung</Text>
@@ -161,8 +161,8 @@
   
   <Setting xsi:type="DropDown">
     <Group>Cheats</Group>
-    <Name>Schnell Zurücksetzen</Name>
-    <Description>Nicht konfigurierbar. Resettet das Spiel durch ein sofortiges Game Over.{0}Verwendung: STRG+R oder L1+L2+R1+R2+Wählen Sie+Anfang</Description>
+    <Name>Spiel resetten</Name>
+    <Description>Nicht konfigurierbar. Resettet das Spiel durch ein sofortiges Game Over.{0}Verwendung: STRG+R oder L1+L2+R1+R2</Description>
     <DefaultValue></DefaultValue>
     <Option>
       <Text>Siehe Beschreibung</Text>
@@ -173,7 +173,7 @@
   <Setting xsi:type="DropDown">
     <Group>Cheats</Group>
     <Name>Geschwindigkeitssteigerung</Name>
-    <Description>Höhe der Spielgeschwindigkeitssteigerung pro Tastendruck. Verwendung: STRG+Auf/Ab oder L2+R2+Auf/Ab zum Ändern der Geschwindigkeit STRG+Links/Rechts oder L2+R2+Links/Rechts zum Ein- und Ausschalten.</Description>
+    <Description>Höhe der Spielgeschwindigkeitssteigerung pro Tastendruck. Verwendung: STRG+Auf/Ab oder L2+R2+Auf/Ab oder Linker Analogstick+LB/RB zum Ändern der Geschwindigkeit STRG+Links/Rechts oder L2+R2+Links/Rechts oder Linker Analogstick+LT zum Ein- und Ausschalten.</Description>
     <DefaultValue>speedhack_step = 0.5</DefaultValue>
     <Option>
       <Text>0.5</Text>
@@ -238,11 +238,11 @@
 
   <Setting xsi:type="DropDown">
     <Group>Erweitert</Group>
-    <Name>Movies Optionen</Name>
+    <Name>Filmtreiber</Name>
     <Description>FFMPEG für das abspielen der Movies im Spiel(FMVs) verwenden. Oder den orginal Renderer, welcher eventuell nicht alle Movie Mods unterstützt.</Description>
     <DefaultValue>enable_ffmpeg_videos = true</DefaultValue>
     <Option>
-      <Text>Autodetect (Empfohlen)</Text>
+      <Text>Automatisch (Empfohlen)</Text>
       <Settings>enable_ffmpeg_videos = -1</Settings>
     </Option>
     <Option>
@@ -257,8 +257,8 @@
 
   <Setting xsi:type="Checkbox">
     <Group>Erweitert</Group>
-    <Name>Analogue Controls</Name>
-    <Description>Enable support for full omni-directional anaglogue control.</Description>
+    <Name>Erweiterte Analog Steuerung</Name>
+    <Description>Aktiviert die volle 360 Grad Steuerung der Analogsticks.</Description>
     <DefaultValue>enable_analogue_controls = false</DefaultValue>
     <TrueSetting>enable_analogue_controls = true</TrueSetting>
     <FalseSetting>enable_analogue_controls = false</FalseSetting>
@@ -266,8 +266,8 @@
 
   <Setting xsi:type="Checkbox">
     <Group>Erweitert</Group>
-    <Name>Steam Compatibility</Name>
-    <Description>Enable Steam features (Game activity, Controller, and Achievements). REQUIRES Steam to be running.</Description>
+    <Name>Aktiviert die Steam Unterstüzung</Name>
+    <Description>Aktiviert Steam Funktionen (Spiele Aktivitäten, Controller, und Erfolge). Steam MUSS vorher manuell gestartet werden.</Description>
     <DefaultValue>enable_steam_achievements = false</DefaultValue>
     <TrueSetting>enable_steam_achievements = true</TrueSetting>
     <FalseSetting>enable_steam_achievements = false</FalseSetting>
@@ -311,8 +311,8 @@
 	
   <Setting xsi:type="DropDown">
     <Group>Erweitert</Group>
-    <Name>Internal Resolution Scaler</Name>
-    <Description>Multiply 640x480 internal resolution by following amount. Higher values need more powerful GPU.  Higher values can remove scaling artefacts, * Values are optimal performance quality tradeoff.</Description>
+    <Name>Interne Auflösung</Name>
+    <Description>Multipliziert die interne Auflöung von 640x480 mit dem angegebenen Wert. Hohe Werte setzen eine leisungsfähige Grafikkarte vorraus. Ein hoher Wert kann das entstehen von Grafik Artefakten (Grafik Fehler) vermindern, * Werte sind optimal zwischen Leistung und Quallität ausballanciert.</Description>
     <DefaultValue>internal_resolution_scale = 0</DefaultValue>
     <Option>
       <Text>Auto</Text>
